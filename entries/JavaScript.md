@@ -1,0 +1,1 @@
+JavaScript is an object oriented programming language that is mostly used by frontend developers i.e. it is the language of the web. It is a loosely typed dynamic programming language. 

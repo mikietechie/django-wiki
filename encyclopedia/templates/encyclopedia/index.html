@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} Encyclopedia {% endblock %} {% block body %}
+<h1 class="text-center display-4">{{ pages }}</h1>
+
+<ul class="list-group">
+    {% for entry in entries %}
+    <li class="list-group-item"><a href="{% url 'wiki' entry %}" class="nav-link">{{ entry }}</a></li>
+    {% empty %}
+    <div class="alert-danger mx-auto my-auto py-5 px-5">
+        Not Found!!!
+    </div>
+    {% endfor %}
+</ul>
+
+{% endblock %}

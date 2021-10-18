@@ -1,0 +1,36 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} {{title}} {% endblock %} {% block body %}
+<div class="card card-small">
+    <div class="card-header">
+        <div class="card-title text-center text-danger display-2">
+            Error
+        </div>
+    </div>
+    <div class="card-body bg-danger text-center p-5 mb-5">
+        {{message}}
+    </div>
+    <a href="{% url 'index' %}" class="redirect-link">Click here to go back to entries page</a>
+</div>
+<style>
+    .redirect-link {
+        text-align: center;
+        padding: 16px;
+        border: 2px solid red;
+        font-size: 18px;
+        font-weight: bold;
+        color: pink;
+        transition: background;
+        transition-duration: 0.3s;
+    }
+    .redirect-link:hover {
+        background: red;
+    }
+    .card {
+        border: 0px;
+    }
+    .card-body {
+        font-weight: bolder;
+        color: #fff;
+        font-size: 16px;
+    }
+</style>
+{% endblock %}
